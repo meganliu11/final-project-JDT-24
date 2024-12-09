@@ -8,52 +8,80 @@
 </head>
 <body>
   <header class="main-header">
-    <h1>MEGAN LIU STUDIO</h1>
+    <h1 class="logo">MEGAN LIU STUDIO</h1>
     <nav class="nav-container">
-      <a href="writing.html" class="active">writing</a>
-      <a href="design.html">design</a>
-      <a href="contact.html">contact</a>
+      <a href="writing.html" class="writing-link">writing</a>
+      <a href="design.html" class="design-link"> design</a>
+      <a href="contact.html"class="contact-link">contact</a>
     </nav>
   </header>
 
+  <main class="contact-info">
+    <p>based in nyc</p>
+    <p> <a href="mailto:lium190@newschool.edu">lium190@newschool.edu</a></p>
+    <p><a href="https://instagram.com" target="_blank">instagram</a></p>
+  </main>
+
+
+
+
+
+
 </body>
+
+
 
 <style>
 
 h1 {
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
 
 
 body {
-background-color: black;
-color: white;
+  background-color: black;
+  color: white;
 
 }
 
 .main-header {
-    text-align: left;
-    font-size: 3rem;
-    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: helvetica;
+    margin: 0;
 }
 
 
 .nav-container {
     display: flex;
     justify-content: flex-end;
-    gap: 15px;
-    font-family: 'Times New Roman', Times, serif;
+    align-items: center;
+    gap: 20px;
 
 }
 
 .nav-container a {
     color: white;
     text-decoration: none;
+    font-size: 2rem;
 }
 
 .nav-container a:hover {
     color: red;
+}
+
+.nav-container a.design-link {
+    font-size: 3.5rem;
+    color: red;
+   
 }
 
 main {
@@ -64,6 +92,16 @@ h2 {
     font-size: 2rem;
     margin-bottom: 20px;
 }
+
+.contact-info {
+  color: white
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+}
+
 
 </style>
 
