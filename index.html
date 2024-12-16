@@ -26,11 +26,15 @@
 
  <footer class="main-footer">
   <nav class="footer-nav">
+    <div class="footer-group large-links"> 
     <a href="writing.html" class="large-link">writing</a>
     <a href="design.html" class="large-link">design</a>
+   </div>
+    <div class="footer-group small-links">
     <a href="https://www.instagram.com/meganliustudio/">instagram</a>
     <a href="https://www.linkedin.com/in/megan-liu-6ba511315/">linkedIn</a>
     <a href="contact.html">contact</a>
+   </div>
   </nav>
  </footer>
 
@@ -164,6 +168,8 @@ min-height: 100vh;
 }
 
 
+
+
 .footer-nav a {
   margin: 0;
   text-decoration: none;
@@ -171,6 +177,15 @@ min-height: 100vh;
 
 }
 
+
+.large-links a {
+  font-size: 5rem;
+  margin-right: 15px; 
+}
+
+.large-links a:last-child {
+  margin-right: 0; 
+}
  
 .large-link {
   font-size: 5rem;
@@ -179,10 +194,31 @@ min-height: 100vh;
 
 
 @media (max-width: 480px) {
-  .header-title {
-    font-size: 2rem;
-    line-height: 1.2;
+  .footer-nav {
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
   }
+
+  .footer-group {
+    display: flex;
+    gap: 25px;
+    margin-top: -15px;
+    
+  }
+
+  .footer-group.large-links a {
+    font-size: 3rem;
+    margin-right: 0;
+    gap: 50px;
+    margin-left: -15px;
+  }
+  .footer-groups.small-links a {
+    font-size: 1.5rem;
+    margin-left: -17px;
+    gap: 30px;
+  }
+  
 
   .landing-content h1 {
     font-size: 1.5rem;
@@ -193,20 +229,21 @@ min-height: 100vh;
   }
 
   .image-container {
-    max-width: 90%;
+    margin-top: 230px;
+    max-width: 100%;
+    
+  }
+ 
+  .main-header {
+    font-size: 3rem;
+    margin: 3px;
+    padding: 5px;
   }
 
-  .text-content .highlight-text {
-    font-size: 0.9rem;
-  }
+  
 
-  .footer-nav a {
-    font-size: 0.9rem;
-  }
 
-  .large-link {
-    font-size: 1.2rem;
-  }
+  
 }
 
 
