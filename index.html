@@ -7,6 +7,12 @@
 </head>
 <body>
   
+  <div class="landing-page" id="landing">
+    <div class="landing-content">
+    <h1> MEGAN LIU STUDIO</h1>
+    <p> WRITING DESIGN PHOTO</p>
+    </div>
+  </div>
 
  <header class="main-header">
   <h1>MEGAN LIU <br> STUDIO </h1>
@@ -29,7 +35,20 @@
  </footer>
 
   <script>
-    const images = ["images/header-1.png", "images/header-2.png", "images/header-3.png"];
+    
+    const landing = document.getElementById ('landing');
+
+    function hideLandingPage() {
+      landing.classList.add('hidden');
+    }
+
+    setTimeout(hideLandingPage,5000);
+
+    landing.addEventListener('mousemove', hideLandingPage);
+    landing.addEventListener('click', hideLandingPage);
+
+    //Slideshow
+    const images = ["images/header-1.png", "images/header-2.png", "images/header-3.png", "images/Instagram post - 348.png", ];
     let currentIndex = 0;
 
     const slideshow = document.getElementById("slideshow");
@@ -54,6 +73,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
 font-family: Helvetica;
 background-color: black;
@@ -61,6 +81,41 @@ color: white;
 display: flex;
 flex-direction: column;
 min-height: 100vh;
+}
+
+.landing-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("images/Frame 40-2.png") no-repeat center center/cover;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.landing-page.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.landing-content {
+  text-align: center;
+  color: black;
+  font-family: Helvetica;
+}
+
+.landing-content h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.landing-content p {
+  font-size: 1rem;
 }
 
 .main-header {
@@ -120,6 +175,40 @@ min-height: 100vh;
 .large-link {
   font-size: 5rem;
 }
+
+
+
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .landing-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .landing-content p {
+    font-size: 0.9rem;
+  }
+
+  .image-container {
+    max-width: 90%;
+  }
+
+  .text-content .highlight-text {
+    font-size: 0.9rem;
+  }
+
+  .footer-nav a {
+    font-size: 0.9rem;
+  }
+
+  .large-link {
+    font-size: 1.2rem;
+  }
+}
+
 
  </style>
 

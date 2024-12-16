@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Writing - Megan Liu </title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Writing - Megan Liu</title>
+  <link rel="stylesheet" href="https://use.typekit.net/jhg2hgu.css">
 </head>
 <body>
   <header class="main-header">
-    <h1 class="logo">MEGAN LIU STUDIO</h1>
+    <a href="index.html" class="logo-link">
+      <h1 class="logo">MEGAN LIU STUDIO</h1>
+    </a>
     <nav class="nav-container">
       <a href="writing.html" class="writing-link">writing</a>
       <a href="design.html" class="design-link">design</a>
@@ -18,9 +20,10 @@
 
   <main class="writing-content">
     <div class="grid-container">
+      <!-- Grid Items -->
       <div id="image-1" class="grid-item">
         <img src="images/frame31.png" alt="Article Image">
-        <a href="https://www.newschoolfreepress.com/2024/11/21/how-this-parsons-first-year-walked-her-own-design-and-closed-the-show-at-silk-first-light/">How this Parsons first-year walked her own design and closed the show at Silk: First Light </a>
+        <a href="https://www.newschoolfreepress.com/2024/11/21/how-this-parsons-first-year-walked-her-own-design-and-closed-the-show-at-silk-first-light/">How this Parsons first-year walked her own design and closed the show at Silk: First Light</a>
       </div>
       <div id="image-2" class="grid-item">
         <img src="images/DSC05889.jpg" alt="Article Image">
@@ -44,135 +47,110 @@
       </div>
       <div id="image-7" class="grid-item">
         <img src="images/DSC09537-2.jpg" alt="Article Image">
-        <a href="https://www.newschoolfreepress.com/2024/10/28/in-conversation-with-teen-vogue-evolution-of-the-fashion-editorial-and-whats-next/">In conversation with Teen Vogue: Evolution of the fashion editorial and what’s next</a>
+        <a href="https://www.newschoolfreepress.com/2024/10/28/in-conversation-with-teen-vogue-evolution-of-the-fashion-editorial-and-what’s-next/">In conversation with Teen Vogue: Evolution of the fashion editorial and what’s next</a>
       </div>
     </div>
   </main>
 </body>
 
+
 <style>
-
-h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-}
-
-
 body {
-background-color: black;
-color: white;
-font-family: 'Times New Roman', Times, serif;
-font-weight: normal;
-font-size: 17px;
+  background-color: black;
+  color: white;
+  font-family: "itc-galliard", serif;
 
 }
+
 
 .main-header {
-   
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     padding: 20px;
 }
 
 .logo {
   font-size: 4rem;
+  font-family: Helvetica, sans-serif;
   font-weight: bold;
   margin: 0;
 }
 
 .nav-container {
-    display: flex;
+   display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 20px;
-
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .nav-container a {
-    color: white;
-    text-decoration: none;
-    font-size: 2rem;
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+}
+
+.logo-link {
+  color: white;
+  text-decoration: none;
+}
+
+
+.nav-container a.writing-link {
+  font-size: 3.5rem;
+  color: red;
 }
 
 .nav-container a:hover {
-    color: red;
+  color: red;
 }
-
-.nav-container a.writing-link {
-    font-size: 3.5rem;
-    color: red;
-}
-
-main {
-    padding: 10px;
-}
-
-h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-
-#image-1 {
-  grid-area: image-1;
-}
- 
-#image-2 {
-  grid-area: image-2;
-}
-
-#image-3 {
-  grid-area: image-3;
-}
-
-#image-4 {
-  grid-area: image-4;
-}
-
-#image-5 {
-  grid-area: image-5;
-}
-
-#image-6 {
-  grid-area: image-6;
-
-}
-
-#image-7 {
-  grid-area: image-7;
-}
-
 
 .grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
-    justify-content: space-between;
-    grid-template-areas: 
-    'image-1 image-2 image-3'
-    'image-4 image-5 image-6'
-    'image-7 . .';
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 96.75%;
+  margin: 0 auto;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .grid-item a {
   color: white;
-  display: block;
+  text-decoration: underline;
+  font-size: 1.65rem;
   margin-top: 5px;
-  font-size: 1.25rem;
 }
 
-.grid-item img { 
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
 
-  max-width: 100%;
-  height: auto;
-  display: block;
-  justify-self: center;
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .grid-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .grid-item a {
+    text-align: center;
+    font-size: 1.25rem;
+  }
 }
-
-
-  
-
 </style>
 </html>
+

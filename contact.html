@@ -8,7 +8,9 @@
 </head>
 <body>
   <header class="main-header">
-    <h1 class="logo">MEGAN LIU STUDIO</h1>
+    <a href="index.html" class="logo-link">
+      <h1 class="logo">MEGAN LIU STUDIO</h1>
+    </a>
     <nav class="nav-container">
       <a href="writing.html" class="active">writing</a>
       <a href="design.html">design</a>
@@ -19,7 +21,7 @@
   <main class="contact-info">
     <p>based in nyc</p>
     <p> <a href="mailto:lium190@newschool.edu">lium190@newschool.edu</a></p>
-    <p><a href="https://instagram.com" target="_blank">instagram</a></p>
+    <p><a href="https://www.instagram.com/meganliustudio/" target="_blank">instagram</a></p>
   </main>
 
 
@@ -59,6 +61,11 @@ body {
     margin: 0;
 }
 
+.logo-link {
+  color: white;
+  text-decoration: none;
+}
+
 
 .nav-container {
     display: flex;
@@ -94,8 +101,8 @@ h2 {
 }
 
 .contact-info {
-  font-size: 2.25rem;
-  font-weight: 100; 
+  font-size: 2.05rem;
+  font-weight: lighter; 
   
 }
 
@@ -110,6 +117,15 @@ h2 {
     text-decoration: none;
 }
 
+
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    
+  }
+}
 
 </style>
 

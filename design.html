@@ -4,105 +4,184 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Design - Megan Liu</title>
-  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Header Section -->
   <header class="main-header">
-    <h1 class="logo">MEGAN LIU STUDIO</h1>
+    <a href="index.html" class="logo-link">
+      <h1 class="logo">MEGAN LIU STUDIO</h1>
+    </a>
     <nav class="nav-container">
       <a href="writing.html" class="writing-link">writing</a>
-      <a href="design.html" class="design-link"> design</a>
-      <a href="contact.html"class="contact-link">contact</a>
+      <a href="design.html" class="design-link">design</a>
+      <a href="contact.html" class="contact-link">contact</a>
     </nav>
   </header>
 
-  <main class="contact-info">
-    <p>based in nyc</p>
-    <p> <a href="mailto:lium190@newschool.edu">lium190@newschool.edu</a></p>
-    <p><a href="https://instagram.com" target="_blank">instagram</a></p>
+  <!-- Intro Section -->
+  <section class="intro">
+    <p>NEW SCHOOL FREE PRESS, PHOTOGRAPHY, PHOTO ILLUSTRATION DESIGN, PHOTOGRAPHY + SOCIAL MEDIA DESIGN</p>
+  </section>
+
+  <!-- Grid Container -->
+  <main class="grid-container">
+    <!-- Top Feature Image -->
+    <div class="feature-image">
+      <img src="images/frame31.png" alt="Top Design Image">
+    </div>
+
+    <!-- First Row -->
+    <div class="grid-item square">
+      <img src="images/header-3.png" alt="Image 1">
+    </div>
+    <div class="grid-item square">
+      <img src="images/header-1.png" alt="Image 2">
+    </div>
+    <div class="grid-item square">
+      <img src="images/DSC00541.jpg" alt="Image 3">
+    </div>
+
+    <!-- Third Row -->
+    <div class="grid-item square">
+      <img src="images/Instagram post - 348.png" alt="Square Image 4">
+    </div>
+    <div class="grid-item square">
+      <img src="images/Instagram post - 350.png" alt="Square Image 5">
+    </div>
+    <div class="grid-item square">
+      <img src="images/Instagram post - 388.png" alt="Square Image 6">
+    </div>
+
+    <!-- Bottom Row -->
+    <div class="grid-item square">
+      <img src="images/Instagram post - 390.png" alt="Square Image 7">
+    </div>
+    <div class="grid-item square">
+      <img src="images/Instagram post - 365.png" alt="Square Image 8">
+    </div>
+    <div class="grid-item square">
+      <img src="images/Instagram post - 353.png" alt="Square Image 9">
+    </div>
   </main>
-
-
-
-
-
-
 </body>
 
 
 
 <style>
 
-h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-}
-
-
 body {
   background-color: black;
   color: white;
-
+  font-family: Helvetica, Arial, sans-serif;
 }
 
+/* Header */
 .main-header {
     display: flex;
     justify-content: space-between;
     align-items: start;
     padding: 20px;
+    padding-bottom: 1%;
+}
+
+
+.logo-link {
+  text-decoration: none;
+  color: white;
 }
 
 .logo {
-    font-size: 4rem;
-    font-weight: bold;
-    font-family: helvetica;
-    margin: 0;
+  font-size: 4rem;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  margin: 0;
 }
 
-
 .nav-container {
-    display: flex;
+   display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 20px;
-
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .nav-container a {
-    color: white;
-    text-decoration: none;
-    font-size: 2rem;
-}
-
-.nav-container a:hover {
-    color: red;
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
 }
 
 .nav-container a.design-link {
-    font-size: 3.5rem;
-    color: red;
-   
+  font-size: 3.5rem;
+  color: red;
 }
 
-main {
-    padding: 20px;
+/* Intro and Second Text */
+.intro {
+  text-align: left;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: lighter;
+  max-width: 80%;
+  padding-left: 15px;
+  padding-top: -30px;
 }
 
-h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+.second-text {
+  grid-column: span 3;
 }
 
-.contact-info {
-  color: white
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.contact-info a {
-    color: white;
-    text-decoration: none;
+.feature-image {
+  grid-column: span 3;
+}
+
+.feature-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Square Items */
+.grid-item.square {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.grid-item.square img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .main-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-container {
+    justify-content: center;
+  }
+
+  .feature-image {
+    grid-column: span 1;
+  }
+}
 </style>
-
 </html>
